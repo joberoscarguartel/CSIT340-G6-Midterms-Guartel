@@ -1,14 +1,17 @@
 import Navbar from './components/Navbar.jsx'
 import PlanPicker from './components/PlanPicker.jsx'
+import PlanCard from './components/PlanCard.jsx'
 
 function App() {
-  
   return (
     <div className="flex min-h-screen flex-col bg-[#DDDDDD] text-[#000000]">
       <Navbar />
       <PlanPicker />
       <main className="grid grid-cols-3 gap-8 px-20 pt-10">
-        <div className="overflow-hidden rounded-xl border-2 border-[#000000] bg-[#EEEEEE]">
+        <PlanCard name="Starter" price={199} storage="10 GB storage" support="Email support" seats={PlanPicker.seatss} months={PlanPicker.monthss}/>
+        <PlanCard name="Team" price={499} storage="100 GB storage" support="Chat support" seats={PlanPicker.seatss} months={PlanPicker.monthss}/>
+        <PlanCard name="Business" price={999} storage="1000 GB storage" support="Phone support" seats={PlanPicker.seatss} months={PlanPicker.monthss}/>
+        {/* <div className="overflow-hidden rounded-xl border-2 border-[#000000] bg-[#EEEEEE]">
           <div className="p-8">
             <h3 className="text-3xl font-bold">Starter</h3>
             <p className="mt-2 text-xl">PHP 199 per seat each month</p>
@@ -46,7 +49,7 @@ function App() {
           <p className="bg-[#000000] px-8 py-5 text-3xl font-bold text-[#EEEEEE]">
             Total: PHP {999 * seats * months}
           </p>
-        </div>
+        </div> */}
       </main>
 
       <footer className="mt-auto bg-[#000000] px-20 py-6 text-center text-xl text-[#EEEEEE]">
